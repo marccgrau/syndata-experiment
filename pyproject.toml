@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["marccgrau <marcgrau@outlook.com>"]
 readme = "README.md"
-packages = [{ include = "syndata_experiment" }]
+packages = [{ include = "*" }]
 
 [tool.poetry.dependencies]
 python = "^3.11"
