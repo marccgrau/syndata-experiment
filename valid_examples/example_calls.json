@@ -1,0 +1,489 @@
+{
+  "calls": [
+    {
+      "call_id": "0b423250-3b33-4c50-9338-45b08c12e8fd",
+      "script": [
+        {
+          "person": "Agent",
+          "text": "Kantonalbank, Max Mustermann"
+        },
+        {
+          "person": "Client",
+          "text": "Grüezi Herr Popp, hier ist Müller."
+        },
+        {
+          "person": "Agent",
+          "text": "Grüezi Frau Müller. Wie kann ich Ihnen helfen?"
+        },
+        {
+          "person": "Client",
+          "text": "Ich möchte gerne mit Frau Sieber sprechen"
+        },
+        {
+          "person": "Agent",
+          "text": "Sehr gerne. Ich werde sie nachher direkt mit Frau Sieber verbinden. Damit ich sie im System suchen kann: Wie lautet ihr Vorname?"
+        },
+        {
+          "person": "Client",
+          "text": "Nicole"
+        },
+        {
+          "person": "Agent",
+          "text": "Ich identifiziere sie direkt noch. Wie lautet ihre Wohnadresse und ihr Geburtsdatum?"
+        },
+        {
+          "person": "Client",
+          "text": "Musterstrasse 5 in Zürich und was ist das zweite gewesen?"
+        },
+        {
+          "person": "Agent",
+          "text": "Ihr Geburtsdatum bitte."
+        },
+        {
+          "person": "Client",
+          "text": "01.01.1990"
+        },
+        {
+          "person": "Agent",
+          "text": "Wie lautet ihr Heimatort?"
+        },
+        {
+          "person": "Client",
+          "text": "Zürich"
+        },
+        {
+          "person": "Agent",
+          "text": "Und hat jemand eine Vollmacht bei Ihnen?"
+        },
+        {
+          "person": "Client",
+          "text": "Ja meine Mutter Iris."
+        },
+        {
+          "person": "Agent",
+          "text": "Nutzen Sie E-Banking, wenn ja wie lautet die Vertragsnummer?"
+        },
+        {
+          "person": "Client",
+          "text": "Ja das mache ich. Oh wie heisst die Nummer schon wieder…. Ähm 12345-0005"
+        },
+        {
+          "person": "Agent",
+          "text": "Vielen Dank für die Angaben. Für Sie einfach zur Information: Ihre Mutter Iris hat bei Ihnen keine Vollmacht. Aktuell ist niemand hinterlegt. Möchten Sie das so beibehalten?"
+        },
+        {
+          "person": "Client",
+          "text": "Oh, danke für die Information. Nein im Moment lasse ich es so."
+        },
+        {
+          "person": "Agent",
+          "text": "Das ist doch in Ordnung. Was kann ich Frau Sieber sagen, um was gehen wird?"
+        },
+        {
+          "person": "Client",
+          "text": "Meine Hypothek läuft Ende Februar aus und ich möchte sie verlängern."
+        },
+        {
+          "person": "Agent",
+          "text": "Gut. Dann verbinde ich sie jetzt mit Frau Sieber. Frau Müller ich danke Ihnen für den Anruf und wünsche Ihnen noch einen schönen Tag."
+        },
+        {
+          "person": "Client",
+          "text": "Danke das wünsche ich Ihnen auch."
+        },
+        {
+          "person": "Agent",
+          "text": "Frau Müller?"
+        },
+        {
+          "person": "Client",
+          "text": "Ja?"
+        },
+        {
+          "person": "Agent",
+          "text": "Vielen Dank für Ihre Geduld. Leider habe ich Frau Sieber nicht erreicht. Darf sie Sie zurückrufen?"
+        },
+        {
+          "person": "Client",
+          "text": "Ja gerne."
+        },
+        {
+          "person": "Agent",
+          "text": "Sind sie auf dieser Nummer, die sie jetzt nutzen, erreichbar?"
+        },
+        {
+          "person": "Client",
+          "text": "Genau das ist diese."
+        },
+        {
+          "person": "Agent",
+          "text": "Super. Dann richte ich Frau Sieber aus, dass sie sie bezüglich der Hypothekarverlängerung anrufen soll."
+        },
+        {
+          "person": "Client",
+          "text": "Danke schön. Ich wünsche Ihnen einen schönen Tag."
+        },
+        {
+          "person": "Agent",
+          "text": "Danke gleichfalls, auf Wiederhören Frau Müller."
+        },
+        {
+          "person": "Client",
+          "text": "Auf Wiedersehen."
+        }
+      ],
+      "callback_note": {
+        "name": "Nicole Müller",
+        "person_number": "123.456.789.0",
+        "message": "Hallo Patricia\nHypothekarverlängerung (offen)\nFrau Müller möchte mit dir in Bezug auf die Hypothekarverlängerung Ende Februar 2024 sprechen.\nVielen Dank und lieber Gruss\nFabian",
+        "action_items": "mortgage_extension",
+        "resolved_items": null,
+        "wants_callback": true,
+        "phone_private": "079 111 11 11",
+        "remark": null
+      }
+    },
+    {
+      "call_id": "0b423140-3b33-4c50-9338-45b08c12e9fd",
+      "script": [
+        {
+          "person": "Agent",
+          "text": "Kantonalbank, hier ist Max Mustermann"
+        },
+        {
+          "person": "Client",
+          "text": "Grüezi, ich möchte gerne ein Kilo Gold bestellen."
+        },
+        {
+          "person": "Agent",
+          "text": "Guten Tag, wen habe ich bitte am Telefon?"
+        },
+        {
+          "person": "Client",
+          "text": "Mein Name ist Müller."
+        },
+        {
+          "person": "Agent",
+          "text": "Frau Müller, gerne schaue ich die Goldbestellung mit Ihnen an. Haben Sie Ihr Konto bei unserer Kantonalbank eröffnet?"
+        },
+        {
+          "person": "Client",
+          "text": "Ja, das habe ich am roten Platz eröffnet."
+        },
+        {
+          "person": "Agent",
+          "text": "Sehr schön. Frau Müller ich suche Sie im System und identifiziere Sie: Wie lautet Ihr Vorname und Ihr Geburtsdatum?"
+        },
+        {
+          "person": "Client",
+          "text": "Nicole und ich bin am 01.01.90 geboren."
+        },
+        {
+          "person": "Agent",
+          "text": "Wie lautet Ihr Heimatort?"
+        },
+        {
+          "person": "Client",
+          "text": "Zürich"
+        },
+        {
+          "person": "Agent",
+          "text": "Und wieviel Geld haben Sie aktuell auf ihrem Konto?"
+        },
+        {
+          "person": "Client",
+          "text": "Ist es egal von welchem Konto?"
+        },
+        {
+          "person": "Agent",
+          "text": "Das ist egal. Sagen Sie mir einfach von welchem Konto Sie mir den Saldo nennen."
+        },
+        {
+          "person": "Client",
+          "text": "Auf dem Lohnkonto habe ich ca. 20'000 und auf dem Sparkonto nochmals 100'000."
+        },
+        {
+          "person": "Agent",
+          "text": "Vielen Dank für die Informationen. Frau Müller ich werde Sie bezüglich dem Goldkauf gerne mit der Kundenberatung verbinden. Haben Sie sonst noch ein Anliegen?"
+        },
+        {
+          "person": "Client",
+          "text": "Nein, das ist alles."
+        },
+        {
+          "person": "Agent",
+          "text": "Gut, dann leite ich Sie jetzt weiter. Ich danke Ihnen für den Anruf und wünsche Ihnen noch einen schönen Nachmittag."
+        },
+        {
+          "person": "Client",
+          "text": "Danke ebenso."
+        },
+        {
+          "person": "Agent",
+          "text": "Auf Wiederhören, Frau Müller."
+        },
+        {
+          "person": "Agent",
+          "text": "Frau Müller?"
+        },
+        {
+          "person": "Client",
+          "text": "Ja?"
+        },
+        {
+          "person": "Agent",
+          "text": "Vielen Dank für Ihre Geduld. Leider habe ich die Kundenberatung telefonisch nicht erreicht. Darf ich Sie zurückrufen?"
+        },
+        {
+          "person": "Client",
+          "text": "Ja, selbstverständlich. Ich bin heute einfach nicht mehr telefonisch erreichbar. Sie dürfen es gerne morgen versuchen."
+        },
+        {
+          "person": "Agent",
+          "text": "Ich kann Ihnen zum Zeitpunkt vom Rückruf leider nichts versprechen. Ich gebe das aber gerne weiter. Auf welcher Nummer sind Sie erreichbar?"
+        },
+        {
+          "person": "Client",
+          "text": "Die welche ich jetzt gerade nutze."
+        },
+        {
+          "person": "Agent",
+          "text": "Entschuldigung, die sehe ich gerade nicht. Können Sie mir die angeben?"
+        },
+        {
+          "person": "Client",
+          "text": "Sicher. 079 530 10 10"
+        },
+        {
+          "person": "Agent",
+          "text": "Sehr gut. Frau Müller ich leite Ihr Anliegen bezüglich dem Kauf von einem Kilo Gold weiter und die Kundenberatung wird Sie telefonisch kontaktieren."
+        },
+        {
+          "person": "Client",
+          "text": "Danke schön."
+        },
+        {
+          "person": "Agent",
+          "text": "Ich danke Ihnen für den Anruf und wünsche Ihnen noch einen schönen Nachmittag, Frau Müller."
+        },
+        {
+          "person": "Client",
+          "text": "Adieu"
+        },
+        {
+          "person": "Agent",
+          "text": "Auf Wiederhören Frau Müller."
+        }
+      ],
+      "callback_note": {
+        "name": "Nicole Müller",
+        "person_number": "123.456.789.0",
+        "message": "Hallo zusammen\nEdelmetalle (offen)\nDie Client möchte 1 Kilo Gold bestellen.\nVielen Dank und lieber Gruss\nFabian",
+        "action_items": "gold_purchase",
+        "resolved_items": null,
+        "wants_callback": true,
+        "phone_private": "079 530 10 10",
+        "remark": "Heute ist sie nicht mehr erreichbar. Sie ist ab morgen wieder verfügbar."
+      }
+    },
+    {
+      "call_id": "0c534140-3b33-4c50-9338-45b08c12e8fd",
+      "script": [
+        {
+          "person": "Agent",
+          "text": "Kantonalbank, hier ist Max Mustermann"
+        },
+        {
+          "person": "Client",
+          "text": "Grüezi, hier ist Müller"
+        },
+        {
+          "person": "Agent",
+          "text": "Grüezi Frau Müller was kann ich für Sie tun?"
+        },
+        {
+          "person": "Client",
+          "text": "Ich rufe an, weil ich meine Kreditkarte verloren habe und diese sperren lassen möchte."
+        },
+        {
+          "person": "Agent",
+          "text": "Gerne. Haben Sie E-Banking?"
+        },
+        {
+          "person": "Client",
+          "text": "Ja, warum?"
+        },
+        {
+          "person": "Agent",
+          "text": "Wenn Sie ihre Karte im E-Banking selber sperren, dann ist es gratis für Sie und auch die Ersatzkartenbestellung wäre 8 statt 15 Franken."
+        },
+        {
+          "person": "Client",
+          "text": "Ok. Ich habe mein Passwort gerade nicht im Kopf und wäre froh, wenn Sie das für mich machen."
+        },
+        {
+          "person": "Agent",
+          "text": "Sehr gerne. Frau Müller ich muss Sie identifizieren: Wie lautet Ihr Vorname und Ihre Wohnadresse?"
+        },
+        {
+          "person": "Client",
+          "text": "Mein Vorname ist Nicole und ich wohne an der Musterstrasse 1 in Genf"
+        },
+        {
+          "person": "Agent",
+          "text": "Wie lautet Ihr Geburtsdatum und Ihr Heimatort?"
+        },
+        {
+          "person": "Client",
+          "text": "Zürich und ich bin am 01.01.1990 geboren."
+        },
+        {
+          "person": "Agent",
+          "text": "Haben Sie einen Dauerauftrag eingerichtet und wenn ja, wie hoch ist der Betrag?"
+        },
+        {
+          "person": "Client",
+          "text": "Nein habe ich nicht"
+        },
+        {
+          "person": "Agent",
+          "text": "Danke für die Informationen. Gemäss System haben Sie eine rote Debit Mastercard. Ist das die Karte, die Sie verloren haben?"
+        },
+        {
+          "person": "Client",
+          "text": "Genau"
+        },
+        {
+          "person": "Agent",
+          "text": "Dann sperre ich die Karte direkt im System und die Gebühren werden direkt von Ihrem Konto belastet."
+        },
+        {
+          "person": "Client",
+          "text": "Das ist in Ordnung. Danke!"
+        },
+        {
+          "person": "Agent",
+          "text": "Soll ich Ihnen direkt eine neue Ersatzkarte bestellen?"
+        },
+        {
+          "person": "Client",
+          "text": "Ja, machen Sie das bitte direkt, ich brauche dringend eine neue Karte."
+        },
+        {
+          "person": "Agent",
+          "text": "Gut, dann bestelle ich die für Sie. Frau Müller möchten Sie den bestehenden PIN übernehmen oder wünschen Sie einen neuen?"
+        },
+        {
+          "person": "Client",
+          "text": "Gern den bestehenden PIN bitte."
+        },
+        {
+          "person": "Agent",
+          "text": "Alles klar. Ich bestelle Ihnen die Ersatzkarte mit dem gleichen PIN. Die Ersatzkartengebühren werden auch wieder von Ihrem Konto belastet. Sie werden die Karte in circa 5 Arbeitstagen erhalten."
+        },
+        {
+          "person": "Client",
+          "text": "Ok gut, danke schön."
+        },
+        {
+          "person": "Agent",
+          "text": "Gern geschehen. Haben Sie noch ein weiteres Anliegen?"
+        },
+        {
+          "person": "Client",
+          "text": "Oh ja, wenn ich Sie schon dran habe. Ich muss noch meine Steuererklärung machen und brauche dazu einen Steuerauszug."
+        },
+        {
+          "person": "Agent",
+          "text": "Standardmässig versenden wir all unseren Clientnen und Kunden die nötige Steuerunterlage. Haben Sie diese nicht erhalten?"
+        },
+        {
+          "person": "Client",
+          "text": "Doch schon. Ich habe aber gehört, dass es noch einen anderen Steuerauszug gibt, der sich für Börsengeschäfte eignet."
+        },
+        {
+          "person": "Agent",
+          "text": "Jenen, wo Ihnen unter anderem aufzeigt, welche Käufe und Verkäufe Sie getätigt haben?"
+        },
+        {
+          "person": "Client",
+          "text": "Ja, genau den meine ich."
+        },
+        {
+          "person": "Agent",
+          "text": "Gut ich schaue mal im System nach, ob dieser für Sie abonniert ist. Gemäss System ist der kostenpflichtige Steuerauszug nicht abonniert. Wenn Sie das wünschen, dann leite ich Sie gerne an die Kundenberatung weiter. Die Kollegen können dann alles nötige für Sie einrichten."
+        },
+        {
+          "person": "Client",
+          "text": "Ja das wäre gut."
+        },
+        {
+          "person": "Agent",
+          "text": "Gut, dann leite ich sie nachher gerne weiter. Frau Müller, haben sie sonst noch einen Wunsch?"
+        },
+        {
+          "person": "Client",
+          "text": "Nein das wäre jetzt alles."
+        },
+        {
+          "person": "Agent",
+          "text": "Sehr schön. Frau Müller, ich danke Ihnen für den Anruf und wünsche Ihnen einen schönen Tag."
+        },
+        {
+          "person": "Client",
+          "text": "Danke schön, Ihnen auch."
+        },
+        {
+          "person": "Agent",
+          "text": "Auf Wiederhören Frau Müller."
+        },
+        {
+          "person": "Agent",
+          "text": "Frau Müller?"
+        },
+        {
+          "person": "Client",
+          "text": "Ja?"
+        },
+        {
+          "person": "Agent",
+          "text": "Danke für Ihre Geduld. Leider erreiche ich die Kundenberatung gerade nicht. Ist es für Sie in Ordnung, wenn sich ein Kollege oder eine Kollegin bei Ihnen telefonisch meldet?"
+        },
+        {
+          "person": "Client",
+          "text": "Ja natürlich."
+        },
+        {
+          "person": "Agent",
+          "text": "Sind Sie auf dieser Nummer erreichbar, die Sie jetzt nutzen?"
+        },
+        {
+          "person": "Client",
+          "text": "Genau"
+        },
+        {
+          "person": "Agent",
+          "text": "Gut, dann notiere ich das so. Ich gebe die Rückruf-Notiz weiter und wir melden uns wieder bei Ihnen."
+        },
+        {
+          "person": "Client",
+          "text": "Vielen Dank. Ich wünsche ihnen einen schönen Tag."
+        },
+        {
+          "person": "Agent",
+          "text": "Ebenso Frau Müller. Auf Wiederhören."
+        }
+      ],
+      "callback_note": {
+        "name": "Nicole Müller",
+        "person_number": "123.456.789.0",
+        "message": "Hallo zusammen\nKarte verloren (erledigt)\nDie Client rief an, da sie ihre Debit Mastercard verloren hat. Die Sperrung sowie Ersatzkartenbestellung habe ich bereits verarbeitet. Obwohl sie E-Banking hätte, wünschte sie die Ausführung durch mich.\nSteuerauszug (offen)\nNun hat sie noch ein zweites Anliegen: Sie wünscht den kostenpflichtigen Steuerauszug. Das Zins- und Saldoverzeichnis reicht ihr nicht aus.\nVielen Dank und lieber Gruss\nFabian",
+        "action_items": "taxstatement_order",
+        "resolved_items": "lost_card",
+        "wants_callback": true,
+        "phone_private": "079 530 10 10",
+        "remark": null
+      }
+    }
+  ]
+}

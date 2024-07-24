@@ -1,3 +1,4 @@
+import json
 import random
 import uuid
 from datetime import datetime
@@ -22,8 +23,22 @@ def load_examples(dataset_name: str, split: str) -> List[Dict]:
         return []
 
 
+# Load additional valid real examples
+def load_valid_real_examples(filepath: str) -> List[Dict]:
+    """Load valid real examples from a specified JSON file."""
+    try:
+        with open(filepath, "r", encoding="utf-8") as file:
+            data = json.load(file)
+        return data["calls"]
+    except Exception as e:
+        st.error(f"Error loading valid real examples: {e}")
+        return []
+
+
 real_examples = load_examples("marccgrau/real_calls_dialogsum", "train")
 synthetic_examples = load_examples("marccgrau/synthetic_data_final_eval", "train")
+
+valid_real_examples = load_valid_real_examples("valid_examples/example_calls.json")
 
 
 def initialize_db():
@@ -48,11 +63,19 @@ def initialize_db():
 initialize_db()
 
 
-def get_random_examples() -> List[Dict]:
+def get_random_examples(valid_real_seen_ids: List[str]) -> List[Dict]:
     """Get one random real example and one random synthetic example, shuffles them, and returns them."""
-    real_example = random.choice(real_examples)
-    real_example["source"] = "real"
+    if random.choice([True, False]) and len(valid_real_seen_ids) < len(valid_real_examples):
+        remaining_valid_real_examples = [ex for ex in valid_real_examples if ex["call_id"] not in valid_real_seen_ids]
+        if remaining_valid_real_examples:
+            real_example = random.choice(remaining_valid_real_examples)
+        else:
+            real_example = random.choice(real_examples)
+    else:
+        real_example = random.choice(real_examples)
+
     synthetic_example = random.choice(synthetic_examples)
+    real_example["source"] = "real"
     synthetic_example["source"] = "synthetic"
     examples = [real_example, synthetic_example]
     random.shuffle(examples)
@@ -127,8 +150,12 @@ if "user_id" not in st.session_state:
 if "answer_count" not in st.session_state:
     st.session_state.answer_count = 0
 
+# Track which valid real examples have been seen
+if "valid_real_seen_ids" not in st.session_state:
+    st.session_state.valid_real_seen_ids = []
+
 if "current_examples" not in st.session_state:
-    st.session_state.current_examples = get_random_examples()
+    st.session_state.current_examples = get_random_examples(st.session_state.valid_real_seen_ids)
 
 examples = st.session_state.current_examples
 
@@ -200,11 +227,16 @@ with col2:
             instruct_lang,
             generation_method,
         )
+
+        # Track the valid real examples that have been seen
+        if real_example_id in [ex["call_id"] for ex in valid_real_examples]:
+            st.session_state.valid_real_seen_ids.append(real_example_id)
+
         # Increment the answer counter
         st.session_state.answer_count += 1
 
         st.success("Selection confirmed. Loading next examples...")
-        st.session_state.current_examples = get_random_examples()
+        st.session_state.current_examples = get_random_examples(st.session_state.valid_real_seen_ids)
         # Reset radio button selection
         st.session_state.selected_example = None
 
