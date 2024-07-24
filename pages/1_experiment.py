@@ -10,6 +10,14 @@ from datasets import load_dataset
 
 st.set_page_config(layout="wide", page_title="Reale vs Synthetische Konversationen", page_icon="🤖")
 
+js = """
+<script>
+    var body = window.parent.document.querySelector(".main");
+    console.log(body);
+    body.scrollTop = 0;
+</script>
+"""
+
 
 # Load real and synthetic examples
 @st.cache_data
@@ -242,6 +250,7 @@ with col2:
         st.session_state.current_examples = get_random_examples(st.session_state.valid_real_seen_ids)
         # Reset radio button selection
         st.session_state.selected_example = None
+        st.components.v1.html(js)
 
     if st.session_state.answer_count >= 10:
         st.switch_page("pages/2_thankyou.py")
