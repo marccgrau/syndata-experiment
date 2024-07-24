@@ -4,27 +4,25 @@ import streamlit as st
 
 st.set_page_config(layout="wide", page_title="Reale vs Synthetische Konversationen", page_icon="🤖")
 
-# Initialize DuckDB database and table in a file
-db_connection = duckdb.connect(database="user_selections.db")
-
 
 # Function to load selections from the DuckDB database
 def load_selections_from_db():
     """Load all user selections from the DuckDB database."""
-    result = db_connection.execute("SELECT * FROM user_selections").fetchall()
-    selections = []
-    for row in result:
-        selection = {
-            "timestamp": row[1],
-            "user_id": row[2],
-            "real_example_id": row[3],
-            "synthetic_example_id": row[4],
-            "selected_real": row[5],
-            "model_id": row[6],
-            "instruct_lang": row[7],
-            "generation_method": row[8],
-        }
-        selections.append(selection)
+    with duckdb.connect(database="user_selections.db") as conn:
+        result = conn.execute("SELECT * FROM user_selections").fetchall()
+        selections = []
+        for row in result:
+            selection = {
+                "timestamp": row[1],
+                "user_id": row[2],
+                "real_example_id": row[3],
+                "synthetic_example_id": row[4],
+                "selected_real": row[5],
+                "model_id": row[6],
+                "instruct_lang": row[7],
+                "generation_method": row[8],
+            }
+            selections.append(selection)
     return selections
 
 

@@ -25,26 +25,27 @@ def load_examples(dataset_name: str, split: str) -> List[Dict]:
 real_examples = load_examples("marccgrau/real_calls_dialogsum", "train")
 synthetic_examples = load_examples("marccgrau/synthetic_data_final_eval", "train")
 
-# Initialize DuckDB database and table in a file
-db_connection = duckdb.connect(database="user_selections.db")
 
-# Create the sequence if it doesn't exist
-db_connection.execute("CREATE SEQUENCE IF NOT EXISTS user_selections_seq")
+def initialize_db():
+    """Initialize the DuckDB database and create the user selections table."""
+    with duckdb.connect(database="user_selections.db") as conn:
+        conn.execute("CREATE SEQUENCE IF NOT EXISTS user_selections_seq")
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS user_selections (
+                id INTEGER DEFAULT nextval('user_selections_seq') PRIMARY KEY,
+                timestamp TIMESTAMP,
+                user_id TEXT,
+                real_example_id TEXT,
+                synthetic_example_id TEXT,
+                selected_real BOOLEAN,
+                model_id TEXT,
+                instruct_lang TEXT,
+                generation_method TEXT
+            )
+        """)
 
-# Create the user selections table if it doesn't exist
-db_connection.execute("""
-    CREATE TABLE IF NOT EXISTS user_selections (
-        id INTEGER DEFAULT nextval('user_selections_seq') PRIMARY KEY,
-        timestamp TIMESTAMP,
-        user_id TEXT,
-        real_example_id TEXT,
-        synthetic_example_id TEXT,
-        selected_real BOOLEAN,
-        model_id TEXT,
-        instruct_lang TEXT,
-        generation_method TEXT
-    )
-""")
+
+initialize_db()
 
 
 def get_random_examples() -> List[Dict]:
@@ -78,23 +79,24 @@ def save_selection_to_db(
 ):
     """Save the user's selection and example IDs to the DuckDB database."""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    db_connection.execute(
-        """
-        INSERT INTO user_selections (
-            timestamp, user_id, real_example_id, synthetic_example_id, selected_real, model_id, instruct_lang, generation_method
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        """,
-        (
-            timestamp,
-            user_id,
-            real_example_id,
-            synthetic_example_id,
-            selected_real,
-            model_id,
-            instruct_lang,
-            generation_method,
-        ),
-    )
+    with duckdb.connect(database="user_selections.db") as conn:
+        conn.execute(
+            """
+            INSERT INTO user_selections (
+                timestamp, user_id, real_example_id, synthetic_example_id, selected_real, model_id, instruct_lang, generation_method
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                timestamp,
+                user_id,
+                real_example_id,
+                synthetic_example_id,
+                selected_real,
+                model_id,
+                instruct_lang,
+                generation_method,
+            ),
+        )
 
 
 st.title("Reale vs Synthetische Konversationen")
