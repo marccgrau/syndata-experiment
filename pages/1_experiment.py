@@ -127,9 +127,12 @@ st.title("Reale vs Synthetische Konversationen")
 st.subheader("Aufgabe")
 st.write(
     """
-    Untenstehend sehen sie zwei verschiedene Konversationsskripte. Lesen sie diese aufmerksam durch.
-    Anschliessend beurteilen Sie welche der beiden Konversationen sie eher als real einschätzen würden.
-    Es kann jeweils nur ein Beispiel ausgewählt werden.
+    Untenstehend sehen sie zwei verschiedene Konversationsskripte. Lesen sie diese aufmerksam durch.\n
+
+    ***Ein Skript ist eine echte Konversation, während das andere synthetisch generiert wurde.*** \n
+
+    Anschliessend beurteilen Sie welche der beiden Konversationen sie eher als die echte Konversation einschätzen würden.
+    Es kann jeweils nur ein Beispiel ausgewählt werden.\n
     Sobald Sie eine Entscheidung getroffen haben, bestätigen Sie Ihre Auswahl mit dem Knopf "Auswahl bestätigen".
     Anschliessend werden zwei neue Beispiele geladen werden, welche erneut beurteilt werden sollen.
     Sobald Sie 10 Beispiele beurteilt haben, werden Sie automatisch weitergeleitet.
