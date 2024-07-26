@@ -143,7 +143,7 @@ st.write(
     Es kann jeweils nur ein Beispiel ausgewählt werden.\n
     Sobald Sie eine Entscheidung getroffen haben, bestätigen Sie Ihre Auswahl mit dem Knopf "Auswahl bestätigen".
     Anschliessend werden zwei neue Beispiele geladen werden, welche erneut beurteilt werden sollen.
-    Sobald Sie 10 Beispiele beurteilt haben, werden Sie automatisch weitergeleitet.
+    Sobald Sie 5 Beispiele beurteilt haben, werden Sie automatisch weitergeleitet.
     """
 )
 st.write(
@@ -252,6 +252,6 @@ with col2:
         st.session_state.selected_example = None
         st.components.v1.html(js)
 
-    if st.session_state.answer_count >= 10:
+    if st.session_state.answer_count >= 5:
         st.switch_page("pages/2_thankyou.py")
     confirm_button = st.button("Auswahl bestätigen", on_click=confirm_selection, use_container_width=True)

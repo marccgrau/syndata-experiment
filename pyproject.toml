@@ -37,6 +37,9 @@ dspy-ai = "^2.4.10"
 deepl = "^1.18.0"
 langchain-together = "^0.1.3"
 poethepoet = "^0.27.0"
+matplotlib = "^3.9.1"
+scipy = "^1.14.0"
+statsmodels = "^0.14.2"
 
 
 [tool.poetry.group.dev.dependencies]

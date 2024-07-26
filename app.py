@@ -19,7 +19,7 @@ st.write(
     2. Entscheiden Sie, welches Skript Sie für die echte Konversation halten.
     3. Bestätigen Sie Ihre Auswahl durch Drücken des Knopfes "Auswahl bestätigen".
     4. Nach jeder Auswahl werden Ihnen zwei neue Konversationsskripte angezeigt.
-    5. Nachdem Sie 10 Entscheidungen getroffen haben, werden Sie automatisch weitergeleitet.
+    5. Nachdem Sie 5 Entscheidungen getroffen haben, werden Sie automatisch weitergeleitet.
 
     Ihre Teilnahme an diesem Experiment hilft uns, die Unterscheidung zwischen realen und synthetischen Texten zu verbessern.\n
     Vielen Dank für Ihre Unterstützung!
